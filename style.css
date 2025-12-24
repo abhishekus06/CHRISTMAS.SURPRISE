@@ -1,0 +1,56 @@
+body {
+    background: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.gift-box {
+    font-size: 80px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.gift-box:hover { transform: scale(1.1); }
+
+.card-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 60px;
+    height: 80px;
+    background: white;
+    border: 2px solid #ff4d4d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hidden { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: transl
